@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ridho Service Elektronik - Layanan perbaikan elektronik, instalasi listrik, dan CCTV terpercaya. Booking jadwal panggilan sekarang!">
+    <meta name="keywords" content="service elektronik, perbaikan handphone, laptop, instalasi listrik, CCTV">
+    <title>Ridho Service Elektronik</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #007bff, #0056b3); color: white; text-align: center; padding: 40px 20px; position: relative; }
+        header h1 { margin: 0; font-size: 2.5em; }
+        header img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; margin-top: 20px; display: none; }
+        .upload-btn { background: #ffc107; color: #333; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        .upload-btn:hover { background: #e0a800; }
+        nav { background: #343a40; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #ffc107; }
+        section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; display: none; }
+        section.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .service-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .service-item { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        .service-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; position: relative; }
+        .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+        .gallery .upload-container { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .testimonial { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        form { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; }
+        input, select, button { width: 100%; margin: 10px 0; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        button { background: #28a745; color: white; border: none; cursor: pointer; font-size: 1.1em; }
+        button:hover { background: #218838; }
+        footer { background: #343a40; color: white; text-align: center; padding: 20px; }
+        footer a { color: #ffc107; margin: 0 10px; text-decoration: none; }
+        .note { font-style: italic; color: #666; margin-top: 10px; }
+        input[type="file"] { display: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ridho Service Elektronik</h1>
+        <p>Layanan perbaikan elektronik cepat dan terpercaya. Booking jadwal panggilan Anda sekarang!</p>
+        <img id="bannerImage" src="" alt="Banner Image">
+        <input type="file" id="bannerUpload" accept="image/*">
+        <button class="upload-btn" onclick="document.getElementById('bannerUpload').click()">Upload Gambar Banner</button>
+    </header>
+    <nav>
+        <a href="#home">Beranda</a>
+        <a href="#services">Layanan</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#testimonials">Testimoni</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+
+    <section id="home" class="active">
+        <h2>Selamat Datang di Ridho Service Elektronik</h2>
+        <p>Kami menyediakan layanan perbaikan dan instalasi elektronik berkualitas tinggi dengan harga terjangkau. Booking sekarang untuk layanan cepat!</p>
+    </section>
+
+    <section id="services">
+        <h2>Layanan Kami</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=Handphone" alt="Perbaikan Handphone">
+                <h3>Perbaikan Handphone</h3>
+                <p>Layar retak, baterai rusak, software error. Harga mulai Rp50.000.</p>
+                <p class="note">Harga disesuaikan berdasarkan kondisi kerusakan (tingkat kerusakan, suku cadang).</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=Laptop" alt="Perbaikan Laptop">
+                <h3>Perbaikan Laptop</h3>
+                <p>Keyboard, hard drive, virus removal. Harga mulai Rp100.000.</p>
+                <p class="note">Harga disesuaikan berdasarkan kondisi kerusakan (tingkat kerusakan, suku cadang).</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=TV" alt="Perbaikan TV">
+                <h3>Perbaikan TV & Elektronik Rumah</h3>
+                <p>Remote, panel, koneksi. Harga mulai Rp75.000.</p>
+                <p class="note">Harga disesuaikan berdasarkan kondisi kerusakan (tingkat kerusakan, suku cadang).</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=Listrik" alt="Instalasi Listrik">
+                <h3>Instalasi Listrik Rumah</h3>
+                <p>Pemasangan stop kontak, lampu, dan sistem kelistrikan aman. Harga mulai Rp200.000.</p>
+                <p class="note">Harga disesuaikan berdasarkan kompleksitas instalasi (ukuran rumah, jumlah titik).</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300x200?text=CCTV" alt="Instalasi CCTV">
+                <h3>Instalasi CCTV</h3>
+                <p>Pemasangan kamera keamanan, rekaman, dan monitoring. Harga mulai Rp500.000.</p>
+                <p class="note">Harga disesuaikan berdasarkan kompleksitas instalasi (jumlah kamera, area cakupan).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Galeri Pekerjaan Kami</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/250x150?text=Perbaikan+HP" alt="Perbaikan Handphone">
+            <img src="https://via.placeholder.com/250x150?text=Instalasi+CCTV" alt="Instalasi CCTV">
+            <img src="https://via.placeholder.com/250x150?text=Listrik+Rumah" alt="Instalasi Listrik">
+            <img src="https://via.placeholder.com/250x150?text=Laptop+Repair" alt="Perbaikan Laptop">
+            <div class="upload-container">
+                <input type="file" id="galleryUpload" accept="image/*" multiple>
+                <button class="upload-btn" onclick="document.getElementById('galleryUpload').click()">Upload Gambar ke Galeri</button>
+                <p>Upload gambar baru untuk ditambahkan ke galeri.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimoni Pelanggan</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"Layanan cepat dan harga terjangkau. Handphone saya diperbaiki dengan baik!" - Ahmad S.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Instalasi CCTV di rumah saya sangat memuaskan. Tim profesional!" - Siti R.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Perbaikan laptop saya selesai dalam sehari. Terima kasih Ridho Service!" - Budi T.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Ridho Service Elektronik didirikan sejak 2015 dengan fokus pada layanan elektronik berkualitas. Kami memiliki tim ahli yang siap membantu Anda dengan perbaikan dan instalasi. Kepuasan pelanggan adalah prioritas kami.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Booking Jadwal Panggilan</h2>
+        <form action="https://formspree.io/f/your-email-here" method="POST" id="bookingForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Nomor Telepon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service">Layanan:</label>
+            <select id="service" name="service" required>
+                <option value="">Pilih Layanan</option>
+                <option value="handphone">Perbaikan Handphone</option>
+                <option value="laptop">Perbaikan Laptop</option>
+                <option value="tv">Perbaikan TV & Elektronik</option>
+                <option value="listrik">Instalasi Listrik Rumah</option>
+                <option value="cctv">Instalasi CCTV</option>
+            </select>
+
+            <label for="date">Tanggal Panggilan:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Waktu Panggilan:</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Booking Sekarang</button>
+        </form>
+        <p id="confirmation" style="display: none; color: green; margin-top: 10px; text-align: center;">Booking berhasil! Kami akan menghubungi Anda segera.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Ridho Service Elektronik. Hubungi: +62 852-67792346</p>
+        <a href="https://wa.me/6285267792346">WhatsApp</a> | <a href="https://instagram.com/ridhoservice">Instagram</a>
+    </footer>
+
+    <script>
+        // Navigasi single-page
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        function showSection(hash) {
+            sections.forEach(sec => sec.classList.remove('active'));
+            const target = document.querySelector(hash);
+            if (target) target.classList.add('active');
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const hash = link.getAttribute('href');
+                window.location.hash = hash;
+                showSection(hash);
+            });
+        });
+
+        // Load section berdasarkan hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash || '#home';
+            showSection(hash);
+        });
+
+        // Form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('confirmation').style.display = 'block';
+        });
+
+        // Upload gambar banner
+        document.getElementById('bannerUpload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('bannerImage').src = e.target.result;
+                    document.getElementById('bannerImage').style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Upload gambar galeri
+        document.getElementById('galleryUpload').addEventListener('change', function(event) {
+            const files = event.target.files;
+            const gallery = document.querySelector('.gallery');
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.alt = 'Uploaded Image';
+                        gallery.insertBefore(img, gallery.lastElementChild);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
